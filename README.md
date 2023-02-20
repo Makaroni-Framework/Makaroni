@@ -23,11 +23,13 @@ PHP >= 8
 
 ## Getting Started
 
-Clone this repo or [download last release](https://github.com/alirezasalehizadeh/Makaroni/releases/tag/last_version), 
+Clone this repo or [download last release](https://github.com/Makaroni-Framework/Makaroni/releases/tag/v1.0.0), 
 
 run `composer install` 
 
 and start the magic
+
+*NOTE: To see an example of a blog application, go to the `blog` branch.
 
 ## Directory trees
 - `core` : this directory have all of source code of Makaroni framework
