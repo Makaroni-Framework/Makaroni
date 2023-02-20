@@ -1,0 +1,21 @@
+{
+    "name": "makaroni/framework",
+    "description": "The Makaroni PHP framework",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Makaroni\\": "main/",
+            "Makaroni\\Framework\\": "core/"
+        },
+        "files": ["main/System/helpers.php"]
+    },
+    "authors": [
+        {
+            "name": "Alireza Salehizadeh",
+            "email": "alirezasalehizadehco@gmail.com"
+        }
+    ],
+    "require": {
+        "symfony/routing": "^6.2"
+    }
+}
