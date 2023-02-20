@@ -1,0 +1,95 @@
+<div>
+<img src="/img/makaroni.jpg" >
+
+
+
+# Makaroni
+
+Makaroni is an yummy framework made for PHP developers ;))
+
+## Features
+
+- Simple and easy to use
+- Routing system
+- Validation
+- QueryBuilder
+
+
+
+##  Requirements
+
+PHP >= 8
+
+
+## Getting Started
+
+Clone this repo or [download last release](https://github.com/alirezasalehizadeh/Makaroni/releases/tag/last_version), 
+
+run `composer install` 
+
+and start the magic
+
+## Directory trees
+- `core` : this directory have all of source code of Makaroni framework
+- `main` : this directory have your application codes
+    - `config` : there are config.php file for config your app
+    - `public` : index.php directory
+    - `route` : define your routes in route.php
+    - `System` : directory for controllers and models (write your helper methods in helpers.php)
+    - `view` : create your views here
+
+
+## Routing
+For create new route, in `route.php` file:
+
+```php
+use Makaroni\Framework\Route\Router;
+
+$this->add("/", ['_controller' => PostController::class, '_method' => 'index'], "post_index");
+
+// with parameters
+$this->add("/post/{slug}", ['_controller' => PostController::class, '_method' => 'show'], "post_show");
+```
+## Validation
+You can validate your inputs with `validate` methods, which gives array of arrays for validation: 
+```php
+
+use Makaroni\Framework\Validation\Validation;
+
+class PostController
+{
+    public function store()
+    {
+        $title = request()->input('title');
+
+        (new Validation)->validate([
+            ['title', $title, 'words'],
+        ]);
+
+        // continues if inputs are valid
+    }
+}
+
+```
+##  QueryBuilder
+[See full documentation](https://github.com/alirezasalehizadeh/QueryBuilder) 
+
+##  Yum
+Use `yum` for run your local webserver:
+```php
+php yum
+
+// PHP 8.1.14 Development Server (http://localhost:8080) started...
+```
+
+
+## Contributing
+Send your pull requests for contributing.
+
+
+## License
+
+[MIT](LICENSE).
+
+
+</div>
