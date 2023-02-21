@@ -10,7 +10,7 @@ class QueryBuilder
      *
      * @var string
      */
-    protected static string $table;
+    public static string $table;
 
 
     /**
