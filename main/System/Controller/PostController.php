@@ -9,13 +9,13 @@ class PostController
 
     public function getAll()
     {
-        $posts = Post::query()->table('posts')->all()->run();
+        $posts = Post::all()->run();
         return view('posts', $posts);
     }
 
     public function getBySlug($request)
     {
-        $post = Post::query()->table('posts')->all()->where(['slug', '=', $request['slug']])->run();
+        $post = Post::all()->where(['slug', '=', $request['slug']])->run();
         return view('post', $post);
     }
 
@@ -36,7 +36,7 @@ class PostController
             ['body', $body, 'words'],
         ]);
 
-        Post::query()->table('posts')->insert([
+        Post::insert([
             'title' => $title,
             'slug' => $slug,
             'body' => $body,
@@ -47,7 +47,8 @@ class PostController
 
     public function edit($request)
     {
-        $post = Post::query()->table('posts')->all()->where(['id', '=', $request['id']])->run();
+        $post = Post::all()->where(['id', '=', $request['id']])->run();
+
         return view('edit', $post);
     }
 
@@ -65,7 +66,7 @@ class PostController
             ['body', $body, 'words'],
         ]);
 
-        Post::query()->table('posts')->update([
+        Post::update([
             'title' => $title,
             'slug' => $slug,
             'body' => $body,
@@ -76,12 +77,8 @@ class PostController
 
     public function delete($request)
     {
-        $id = $request["id"];
-
-        (new Validation)->validate([['id', $id, 'int'],]);
-        
-        Post::query()->table('posts')->delete()->where(['id', '=', $id])->run();
-        
+        Post::delete()->where(['id', '=', $request['id']])->run();
+    
         redirect('/posts');
     }
 }

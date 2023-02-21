@@ -5,4 +5,6 @@ use Makaroni\Framework\Model\DatabaseModel;
 
 class Post extends DatabaseModel
 {
+    
+    public static string $table = "posts";
 }
