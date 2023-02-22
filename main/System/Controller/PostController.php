@@ -13,9 +13,9 @@ class PostController
         return view('posts', $posts);
     }
 
-    public function getBySlug($request)
+    public function getBySlug($parameter)
     {
-        $post = Post::all()->where(['slug', '=', $request['slug']])->run();
+        $post = Post::all()->where(['slug', '=', $parameter['slug']])->run();
         return view('post', $post);
     }
 
@@ -45,16 +45,16 @@ class PostController
         redirect('/posts');
     }
 
-    public function edit($request)
+    public function edit($parameter)
     {
-        $post = Post::all()->where(['id', '=', $request['id']])->run();
+        $post = Post::all()->where(['id', '=', $parameter['id']])->run();
 
         return view('edit', $post);
     }
 
-    public function update($request)
+    public function update($parameter)
     {
-        $id = $request["id"];
+        $id = $parameter["id"];
         $title = request()->input("title");
         $slug = request()->input("slug");
         $body = request()->input("body");
@@ -75,9 +75,9 @@ class PostController
         redirect('/posts');
     }
 
-    public function delete($request)
+    public function delete($parameter)
     {
-        Post::delete()->where(['id', '=', $request['id']])->run();
+        Post::delete()->where(['id', '=', $parameter['id']])->run();
     
         redirect('/posts');
     }
