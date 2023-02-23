@@ -1,17 +1,18 @@
 <?php
 
-use Makaroni\Framework\Config\Config;
-use Makaroni\Framework\Request\Request;
-use Makaroni\Framework\View\View;
+use Makaroni\Core\App;
+use Makaroni\Core\Config\Config;
+use Makaroni\Core\Request\Request;
+use Makaroni\Core\View\View;
 
 function view(string $view, array|null $data = null): void
 {
-    (new View)->make($view, $data);
+    (new View('../view/', '.php'))->make($view, $data);
 }
 
 function config(string|int $key): mixed
 {
-    return (new Config)->get($key);
+    return (new Config(App::get('config')))->get($key);
 }
 
 function request(): object

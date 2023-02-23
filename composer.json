@@ -4,10 +4,9 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Makaroni\\": "main/",
-            "Makaroni\\Framework\\": "core/"
+            "Makaroni\\": "main/"
         },
-        "files": ["main/System/helpers.php"]
+        "files": ["main/System/helpers.php", "main/starter.php"]
     },
     "authors": [
         {
@@ -16,6 +15,7 @@
         }
     ],
     "require": {
-        "symfony/routing": "^6.2"
+        "symfony/routing": "^6.2",
+        "makaroni/core": "dev-main"
     }
 }
