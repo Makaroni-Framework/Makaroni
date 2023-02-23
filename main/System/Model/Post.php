@@ -1,7 +1,7 @@
 <?php
 namespace Makaroni\System\Model;
 
-use Makaroni\Framework\Model\DatabaseModel;
+use Makaroni\Core\Model\DatabaseModel;
 
 class Post extends DatabaseModel
 {

@@ -1,7 +1,7 @@
 <?php
 namespace Makaroni\System\Controller;
 
-use Makaroni\Framework\Validation\Validation;
+use Makaroni\Core\Validation\Validation;
 use Makaroni\System\Model\Post;
 
 class PostController
