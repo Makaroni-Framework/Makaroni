@@ -33,7 +33,7 @@ and start the magic
 *NOTE: To see an example of a blog application, go to the `blog` branch.
 
 ## Directory trees
-- `core` : this directory have all of source code of Makaroni framework
+- `img` : have makaroni logo image
 - `main` : this directory have your application codes
     - `config` : there are config.php file for config your app
     - `public` : index.php directory
