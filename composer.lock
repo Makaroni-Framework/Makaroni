@@ -4,30 +4,75 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "70adc7d135d34220add9788a998425c7",
+    "content-hash": "4d2420a364185da0cc1315775464997b",
     "packages": [
         {
-            "name": "makaroni/core",
+            "name": "alirezasalehizadeh/quick-migration",
             "version": "dev-main",
             "source": {
                 "type": "git",
-                "url": "https://github.com/Makaroni-Framework/Core.git",
-                "reference": "7c727e188e4e1d59c6d590c2cb66bfe471067324"
+                "url": "https://github.com/alirezasalehizadeh/QuickMigration.git",
+                "reference": "d8a9fa7873c1b86044373b7526531974fae55ad0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Makaroni-Framework/Core/zipball/7c727e188e4e1d59c6d590c2cb66bfe471067324",
-                "reference": "7c727e188e4e1d59c6d590c2cb66bfe471067324",
+                "url": "https://api.github.com/repos/alirezasalehizadeh/QuickMigration/zipball/d8a9fa7873c1b86044373b7526531974fae55ad0",
+                "reference": "d8a9fa7873c1b86044373b7526531974fae55ad0",
                 "shasum": ""
             },
             "require": {
+                "php": "^8.1"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "10.1.x-dev"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Alirezasalehizadeh\\QuickMigration\\": "src/",
+                    "Alirezasalehizadeh\\QuickMigration\\Test\\": "test/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Alireza Salehizadeh",
+                    "email": "alirezasalehizadehco@gmail.com"
+                }
+            ],
+            "description": "A quick package for implement migrations in your PHP project.",
+            "support": {
+                "issues": "https://github.com/alirezasalehizadeh/QuickMigration/issues",
+                "source": "https://github.com/alirezasalehizadeh/QuickMigration/tree/v1.0.0"
+            },
+            "time": "2023-03-02T11:15:52+00:00"
+        },
+        {
+            "name": "makaroni/core",
+            "version": "v1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Makaroni-Framework/Core.git",
+                "reference": "86799f22a349990645241e9ed1e1c653b90b78ad"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Makaroni-Framework/Core/zipball/86799f22a349990645241e9ed1e1c653b90b78ad",
+                "reference": "86799f22a349990645241e9ed1e1c653b90b78ad",
+                "shasum": ""
+            },
+            "require": {
+                "alirezasalehizadeh/quick-migration": "dev-main",
                 "php": "^8.0",
                 "symfony/routing": "^6.2"
             },
             "require-dev": {
                 "phpunit/phpunit": "^9.6"
             },
-            "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-4": {
@@ -48,22 +93,22 @@
             "description": "Makaroni core source code",
             "support": {
                 "issues": "https://github.com/Makaroni-Framework/Core/issues",
-                "source": "https://github.com/Makaroni-Framework/Core/tree/main"
+                "source": "https://github.com/Makaroni-Framework/Core/tree/v1.0.2"
             },
-            "time": "2023-02-23T18:23:07+00:00"
+            "time": "2023-03-02T15:33:05+00:00"
         },
         {
             "name": "symfony/routing",
-            "version": "v6.2.5",
+            "version": "6.3.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/routing.git",
-                "reference": "589bd742d5d03c192c8521911680fe88f61712fe"
+                "reference": "ca5f274ab74ccaaf6d97b3284d0995592874e8e5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/routing/zipball/589bd742d5d03c192c8521911680fe88f61712fe",
-                "reference": "589bd742d5d03c192c8521911680fe88f61712fe",
+                "url": "https://api.github.com/repos/symfony/routing/zipball/ca5f274ab74ccaaf6d97b3284d0995592874e8e5",
+                "reference": "ca5f274ab74ccaaf6d97b3284d0995592874e8e5",
                 "shasum": ""
             },
             "require": {
@@ -122,7 +167,7 @@
                 "url"
             ],
             "support": {
-                "source": "https://github.com/symfony/routing/tree/v6.2.5"
+                "source": "https://github.com/symfony/routing/tree/6.3"
             },
             "funding": [
                 {
@@ -138,15 +183,13 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-01-01T08:38:09+00:00"
+            "time": "2023-02-14T09:04:20+00:00"
         }
     ],
     "packages-dev": [],
     "aliases": [],
-    "minimum-stability": "stable",
-    "stability-flags": {
-        "makaroni/core": 20
-    },
+    "minimum-stability": "dev",
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
