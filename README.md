@@ -22,7 +22,7 @@ Clone this repo,
 
 run `composer install`, 
 
-create a database and put `posts` table in it,
+create a database and and run `php migrate`,
 
 run `php yum` and start...
 
