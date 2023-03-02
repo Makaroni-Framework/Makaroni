@@ -1,0 +1,12 @@
+#!/usr/bin/env php
+
+<?php
+require 'vendor/autoload.php';
+
+use Makaroni\Core\Database\Connection;
+use Makaroni\Migration\FoodsTableMigration;
+
+$connection = Connection::getInstance()->setOptions(config('database'))->connect();
+
+(new FoodsTableMigration($connection))->migrate();
+// define other migrations here...
