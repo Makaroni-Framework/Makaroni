@@ -13,6 +13,7 @@ Makaroni is an yummy framework made for PHP developers ;))
 - Routing system
 - Validation
 - QueryBuilder
+- Migration
 
 
 
@@ -23,7 +24,7 @@ PHP >= 8
 
 ## Getting Started
 
-Clone this repo or [download last release](https://github.com/Makaroni-Framework/Makaroni/releases/tag/v1.0.0), 
+Clone this repo or [download last release](https://github.com/Makaroni-Framework/Makaroni/releases/tag/v1.0.2), 
 
 run `composer install` 
 
@@ -39,6 +40,7 @@ and start the magic
     - `route` : define your routes in route.php
     - `System` : directory for controllers and models (write your helper methods in helpers.php)
     - `view` : create your views here
+    - `Migration` : write your migrations here
 
 
 ## Routing
@@ -76,6 +78,9 @@ class PostController
 ##  QueryBuilder
 [See full documentation](https://github.com/alirezasalehizadeh/QueryBuilder) 
 
+##  Migration
+[See full documentation](https://github.com/alirezasalehizadeh/QuickMigration) 
+
 ##  Yum
 Use `yum` for run your local webserver:
 ```php
@@ -83,7 +88,11 @@ php yum
 
 // PHP 8.1.14 Development Server (http://localhost:8080) started...
 ```
-
+## Migrate
+Use `migrate` for run your migrations
+```php
+php migrate
+```
 
 ## Contributing
 Send your pull requests for contributing.
