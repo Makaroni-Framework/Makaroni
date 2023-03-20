@@ -2,7 +2,7 @@
 require '../../vendor/autoload.php';
 
 use Makaroni\Core\Server\Server;
-use Makaroni\Framework\Route\Router;
+use Makaroni\Core\Route\Router;
 
 $uri = (new Server)->getUri();
 
