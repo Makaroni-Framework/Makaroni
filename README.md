@@ -23,12 +23,15 @@ PHP >= 8
 
 
 ## Getting Started
+via Composer:
+```
+composer create-project makaroni/framework project-name
+```
+OR 
 
-Clone this repo or [download last release](https://github.com/Makaroni-Framework/Makaroni/releases/tag/v1.0.2), 
+[download last release](https://github.com/Makaroni-Framework/Makaroni/releases/tag/v1.0.2) and run `composer install`.
 
-run `composer install` 
-
-and start the magic
+Now start the magic!
 
 *NOTE: To see an example of a blog application, go to the `blog` branch.
 
