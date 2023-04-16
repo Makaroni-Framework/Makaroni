@@ -1,9 +1,8 @@
 <?php
-namespace Makaroni\Migration;
+namespace Makaroni\Database\Migration;
 
-use Alirezasalehizadeh\QuickMigration\Enums\Index;
 use Alirezasalehizadeh\QuickMigration\Structure\Structure;
-use Makaroni\Core\Migration\Migration;
+use Makaroni\Core\Database\Migration\Migration;
 
 class PostsTableMigration extends Migration
 {
@@ -14,9 +13,9 @@ class PostsTableMigration extends Migration
         $structure = new Structure('posts');
 
         $structure->id();
-        $structure->string('title', 100)->nullable(false);
-        $structure->string('slug', 150)->nullable(false)->index(Index::Unique);
-        $structure->text('body', 500)->nullable(false);
+        $structure->string('title', 100);
+        $structure->string('slug', 150)->unique();
+        $structure->text('body', 500);
         $structure->timestamp('created_at');
         $structure->timestamp('updated_at');
 

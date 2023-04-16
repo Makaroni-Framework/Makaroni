@@ -1,10 +1,9 @@
 <?php
 namespace Makaroni\System\Model;
 
-use Makaroni\Core\Model\DatabaseModel;
+use Makaroni\Core\Model\DatabaseModel as Model;
 
-class Post extends DatabaseModel
+class Post extends Model
 {
-    
-    public static string $table = "posts";
+    protected static $table = "posts";
 }
