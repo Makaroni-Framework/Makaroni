@@ -25,11 +25,11 @@ PHP >= 8
 ## Getting Started
 via Composer:
 ```
-composer create-project makaroni/framework:1.x-dev project-name
+composer create-project makaroni/framework project-name
 ```
 OR 
 
-[download last release](https://github.com/Makaroni-Framework/Makaroni/releases/tag/v1.0.3) and run `composer install`.
+[download last release](https://github.com/Makaroni-Framework/Makaroni/releases/tag/v1.1.0) and run `composer install`.
 
 Now start the magic!
 
