@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4d2420a364185da0cc1315775464997b",
+    "content-hash": "78045824a87b68757578c978831308b5",
     "packages": [
         {
             "name": "alirezasalehizadeh/quick-migration",
-            "version": "dev-main",
+            "version": "v1.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/alirezasalehizadeh/QuickMigration.git",
-                "reference": "d8a9fa7873c1b86044373b7526531974fae55ad0"
+                "reference": "500823c76adcaba27d819d51ae78f89514d8ffb4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/alirezasalehizadeh/QuickMigration/zipball/d8a9fa7873c1b86044373b7526531974fae55ad0",
-                "reference": "d8a9fa7873c1b86044373b7526531974fae55ad0",
+                "url": "https://api.github.com/repos/alirezasalehizadeh/QuickMigration/zipball/500823c76adcaba27d819d51ae78f89514d8ffb4",
+                "reference": "500823c76adcaba27d819d51ae78f89514d8ffb4",
                 "shasum": ""
             },
             "require": {
@@ -26,12 +26,10 @@
             "require-dev": {
                 "phpunit/phpunit": "10.1.x-dev"
             },
-            "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "Alirezasalehizadeh\\QuickMigration\\": "src/",
-                    "Alirezasalehizadeh\\QuickMigration\\Test\\": "test/"
+                    "Alirezasalehizadeh\\QuickMigration\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -47,26 +45,26 @@
             "description": "A quick package for implement migrations in your PHP project.",
             "support": {
                 "issues": "https://github.com/alirezasalehizadeh/QuickMigration/issues",
-                "source": "https://github.com/alirezasalehizadeh/QuickMigration/tree/v1.0.0"
+                "source": "https://github.com/alirezasalehizadeh/QuickMigration/tree/v1.4.0"
             },
-            "time": "2023-03-02T11:15:52+00:00"
+            "time": "2023-04-16T15:08:42+00:00"
         },
         {
             "name": "makaroni/core",
-            "version": "v1.0.2",
+            "version": "v1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Makaroni-Framework/Core.git",
-                "reference": "86799f22a349990645241e9ed1e1c653b90b78ad"
+                "reference": "506d84336332526f07a267b9504ef880bc791523"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Makaroni-Framework/Core/zipball/86799f22a349990645241e9ed1e1c653b90b78ad",
-                "reference": "86799f22a349990645241e9ed1e1c653b90b78ad",
+                "url": "https://api.github.com/repos/Makaroni-Framework/Core/zipball/506d84336332526f07a267b9504ef880bc791523",
+                "reference": "506d84336332526f07a267b9504ef880bc791523",
                 "shasum": ""
             },
             "require": {
-                "alirezasalehizadeh/quick-migration": "dev-main",
+                "alirezasalehizadeh/quick-migration": "1.4.0",
                 "php": "^8.0",
                 "symfony/routing": "^6.2"
             },
@@ -93,9 +91,9 @@
             "description": "Makaroni core source code",
             "support": {
                 "issues": "https://github.com/Makaroni-Framework/Core/issues",
-                "source": "https://github.com/Makaroni-Framework/Core/tree/v1.0.2"
+                "source": "https://github.com/Makaroni-Framework/Core/tree/v1.1.0"
             },
-            "time": "2023-03-02T15:33:05+00:00"
+            "time": "2023-04-16T19:10:42+00:00"
         },
         {
             "name": "symfony/routing",
@@ -103,12 +101,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/routing.git",
-                "reference": "ca5f274ab74ccaaf6d97b3284d0995592874e8e5"
+                "reference": "8ca22cb598230478c23c5c7520179d123d51841c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/routing/zipball/ca5f274ab74ccaaf6d97b3284d0995592874e8e5",
-                "reference": "ca5f274ab74ccaaf6d97b3284d0995592874e8e5",
+                "url": "https://api.github.com/repos/symfony/routing/zipball/8ca22cb598230478c23c5c7520179d123d51841c",
+                "reference": "8ca22cb598230478c23c5c7520179d123d51841c",
                 "shasum": ""
             },
             "require": {
@@ -183,7 +181,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-02-14T09:04:20+00:00"
+            "time": "2023-04-03T14:56:06+00:00"
         }
     ],
     "packages-dev": [],
@@ -194,5 +192,5 @@
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
-    "plugin-api-version": "2.3.0"
+    "plugin-api-version": "2.0.0"
 }
