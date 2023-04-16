@@ -25,7 +25,7 @@ PHP >= 8
 ## Getting Started
 via Composer:
 ```
-composer create-project makaroni/framework project-name
+composer create-project makaroni/framework:1.x-dev project-name
 ```
 OR 
 
