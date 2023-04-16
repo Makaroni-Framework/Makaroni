@@ -1,8 +1,8 @@
 <?php
-namespace Makaroni\Migration;
+namespace Makaroni\Database\Migration;
 
 use Alirezasalehizadeh\QuickMigration\Structure\Structure;
-use Makaroni\Core\Migration\Migration;
+use Makaroni\Core\Database\Migration\Migration;
 
 class FoodsTableMigration extends Migration
 {

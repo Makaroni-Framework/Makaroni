@@ -4,7 +4,7 @@
 require 'vendor/autoload.php';
 
 use Makaroni\Core\Database\Connection;
-use Makaroni\Migration\FoodsTableMigration;
+use Makaroni\Database\Migration\FoodsTableMigration;
 
 $connection = Connection::getInstance()->setOptions(config('database'))->connect();
 
