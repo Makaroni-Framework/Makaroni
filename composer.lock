@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "78045824a87b68757578c978831308b5",
+    "content-hash": "a8c020b92f04677140f282414ecfc559",
     "packages": [
         {
             "name": "alirezasalehizadeh/quick-migration",
@@ -51,16 +51,16 @@
         },
         {
             "name": "makaroni/core",
-            "version": "v1.1.0",
+            "version": "v1.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Makaroni-Framework/Core.git",
-                "reference": "506d84336332526f07a267b9504ef880bc791523"
+                "reference": "0a576fb6ac1373e7a145cf8d2d5a39a8130d0db5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Makaroni-Framework/Core/zipball/506d84336332526f07a267b9504ef880bc791523",
-                "reference": "506d84336332526f07a267b9504ef880bc791523",
+                "url": "https://api.github.com/repos/Makaroni-Framework/Core/zipball/0a576fb6ac1373e7a145cf8d2d5a39a8130d0db5",
+                "reference": "0a576fb6ac1373e7a145cf8d2d5a39a8130d0db5",
                 "shasum": ""
             },
             "require": {
@@ -91,9 +91,9 @@
             "description": "Makaroni core source code",
             "support": {
                 "issues": "https://github.com/Makaroni-Framework/Core/issues",
-                "source": "https://github.com/Makaroni-Framework/Core/tree/v1.1.0"
+                "source": "https://github.com/Makaroni-Framework/Core/tree/v1.1.1"
             },
-            "time": "2023-04-16T19:10:42+00:00"
+            "time": "2023-04-17T06:31:45+00:00"
         },
         {
             "name": "symfony/routing",
