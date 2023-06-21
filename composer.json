@@ -15,7 +15,7 @@
         }
     ],
     "require": {
-        "makaroni/core": "1.1.1"
+        "makaroni/core": "^1.1.1"
     },
     "minimum-stability" : "dev"
 }
