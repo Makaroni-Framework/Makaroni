@@ -11,21 +11,21 @@
     
     <nav class="navbar navbar-light bg-light">
         <a class="navbar-brand" href="#">
-            Makaroni
+            Makaroni Blog
         </a>
         <a class="navbar-item" href="/post/new">
             New
         </a>
     </nav>
 
-    <?php foreach($data as $post): ?>
+    <?php foreach($posts as $post): ?>
     <div class="card">
         <div class="card-header"></div>
         <div class="card-body">
             <h5 class="card-title"><?= $post['title'] ?></h5>
             <a href="/post/<?= $post['slug'] ?>" class="btn btn-primary">More...</a>
-            <a href="/post/edit/<?= $post['id'] ?>" class="btn btn-success">Update</a>
-            <a href="/post/delete/<?= $post['id'] ?>" class="btn btn-danger">Delete</a>
+            <a href="/post/<?= $post['id']?>/edit" class="btn btn-success">Update</a>
+            <a href="/post/<?= $post['id']?>/delete" class="btn btn-danger">Delete</a>
 
         </div>
     </div>

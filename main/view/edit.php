@@ -15,17 +15,17 @@
         </a>
     </nav>
 
-    <form action="/post/update/<?= $data[0]['id'] ?>" method="POST">
+    <form action="/post/<?= $post['id']?>/update" method="POST">
         <div class="form-group">
             <label>Title</label>
-            <input type="text" class="form-control" name="title" value="<?= $data[0]['title'] ?>">
+            <input type="text" class="form-control" name="title" value="<?= $post['title'] ?>">
             <label>Slug</label>
-            <input type="text" class="form-control" name="slug" value="<?= $data[0]['slug'] ?>">
+            <input type="text" class="form-control" name="slug" value="<?= $post['slug'] ?>">
         </div>
        
         <div class="form-group">
             <label>Body</label>
-            <textarea class="form-control" name="body" rows="3" ><?= $data[0]['body'] ?></textarea>
+            <textarea class="form-control" name="body" rows="3" ><?= $post['body'] ?></textarea>
         </div>
 
         <input type="submit" value="Submit" class="form-control btn-success">

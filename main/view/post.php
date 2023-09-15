@@ -16,8 +16,8 @@
     </nav>
 
     <div class="jumbotron">
-        <h1 class="display-4"><?= $data[0]['title']?></h1>
-        <p class="lead"><?= $data[0]['body'] ?></p>
+        <h1 class="display-4"><?= $post['title']?></h1>
+        <p class="lead"><?= $post['body'] ?></p>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"

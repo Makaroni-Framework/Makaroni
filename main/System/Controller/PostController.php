@@ -10,13 +10,14 @@ class PostController
     public function getAll()
     {
         $posts = Post::all()->run();
-        return view('posts', $posts);
+        return view('posts', compact('posts'));
     }
 
     public function getBySlug($parameter)
     {
-        $post = Post::all()->where(['slug', '=', $parameter['slug']])->run();
-        return view('post', $post);
+        (new Validation)->validate([['slug', $parameter['slug'], 'words']]);
+        $post = Post::all()->where(['slug', '=', $parameter['slug']])->run()[0];
+        return view('post', compact('post'));
     }
 
     public function create()
@@ -47,9 +48,9 @@ class PostController
 
     public function edit($parameter)
     {
-        $post = Post::all()->where(['id', '=', $parameter['id']])->run();
+        $post = Post::all()->where(['id', '=', $parameter['id']])->run()[0];
 
-        return view('edit', $post);
+        return view('edit', compact('post'));
     }
 
     public function update($parameter)

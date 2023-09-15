@@ -16,8 +16,8 @@ class PostsTableMigration extends Migration
         $structure->string('title', 100);
         $structure->string('slug', 150)->unique();
         $structure->text('body', 500);
-        $structure->timestamp('created_at');
-        $structure->timestamp('updated_at');
+        $structure->timestamp('created_at')->nullable();
+        $structure->timestamp('updated_at')->nullable();
 
         return $structure->done();
     }

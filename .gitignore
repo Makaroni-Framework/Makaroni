@@ -1,2 +1,4 @@
 /vendor/
 /main/config/config.php
+/docker/mariadb
+composer.lock

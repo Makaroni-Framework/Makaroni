@@ -1,0 +1,45 @@
+version: '3'
+
+services:
+
+  nginx:
+    container_name: makaroni_blog_nginx
+    image: nginx:alpine
+    volumes:
+      - ../:/var/www/html
+      - ./nginx/config/nginx.conf:/etc/nginx/conf.d/default.conf
+    ports:
+      - 8009:80
+    depends_on:
+      - php-fpm
+
+  php-fpm:
+    container_name: makaroni_blog_php_fpm
+    ports:
+      - 9000:9000
+    build: 
+      context: ./php-fpm
+      dockerfile: Dockerfile
+    volumes:
+      - ../:/var/www/html
+
+  db:
+    container_name: makaroni_blog_mariadb
+    image: mariadb
+    volumes:
+      - ../:/var/www/html
+      - ./mariadb:/var/lib/mysql
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_DATABASE: 
+      MYSQL_ROOT_PASSWORD: 
+
+  composer:
+    container_name: makaroni_blog_composer
+    image: composer
+    working_dir: /var/www/html
+    volumes:
+      - ../:/var/www/html
+    command: composer update
+
