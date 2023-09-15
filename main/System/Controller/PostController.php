@@ -17,12 +17,12 @@ class PostController
     {
         (new Validation)->validate([['slug', $parameter['slug'], 'words']]);
         $post = Post::all()->where(['slug', '=', $parameter['slug']])->run()[0];
-        return view('post', compact('post'));
+        return view('post', ['post' => $post, 'title' => $post['title']]);
     }
 
     public function create()
     {
-        return view('create');
+        return view('create', ['title' => 'New Post']);
     }
 
     public function store()
@@ -50,7 +50,7 @@ class PostController
     {
         $post = Post::all()->where(['id', '=', $parameter['id']])->run()[0];
 
-        return view('edit', compact('post'));
+        return view('edit', ['post' => $post, 'title' => 'Update Post']);
     }
 
     public function update($parameter)

@@ -10,7 +10,9 @@ if (! function_exists('view')) {
 
     function view(string $view, array|null $data = null): void
     {
-        (new View('../view/', '.php'))->make($view, $data);
+        (new View('../view/layouts/', '.layout.php'))->make('header', $data);
+        (new View('../view/', '.view.php'))->make($view, $data);
+        (new View('../view/layouts/', '.layout.php'))->make('footer', $data);
     }
 
 }
