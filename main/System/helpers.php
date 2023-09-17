@@ -12,7 +12,7 @@ if (! function_exists('view')) {
     {
         (new View('../view/layouts/', '.layout.php'))->make('header', $data);
         (new View('../view/', '.view.php'))->make($view, $data);
-        (new View('../view/layouts/', '.layout.php'))->make('footer', $data);
+        (new View('../view/layouts/', '.layout.php'))->make('footer');
     }
 
 }
