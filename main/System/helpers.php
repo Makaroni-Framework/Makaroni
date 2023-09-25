@@ -7,7 +7,7 @@ use Makaroni\Core\View\View;
 
 if (!function_exists('view')) {
 
-    function view(string $view, array|null $data = null): void
+    function view(string $view, array $data = []): void
     {
         (new View('../view/', '.view.php'))->make($view, $data);
     }
