@@ -8,5 +8,5 @@ $uri = (new Server)->getUri();
 
 $route = Router::getInstance()->load('../route/route.php')->find($uri);
 
-$controller = new $route['_controller'];
-call_user_func([$controller, $route['_method']], $route);
+$controller = new $route['controller'];
+call_user_func([$controller, $route['method']], $route);

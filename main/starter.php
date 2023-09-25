@@ -1,5 +1,6 @@
 <?php
 
-use Makaroni\Core\App;
+//use Makaroni\Core\Database\Connection;
 
-App::set('config', require_once 'config/config.php');
+app()->bind('config', fn() => include('config/config.php'));
+//app()->singleton('connection', fn() =>  (new Connection)->setOptions(config('database'))->connect());

@@ -3,10 +3,9 @@
 <?php
 require 'vendor/autoload.php';
 
-use Makaroni\Core\Database\Connection;
 use Makaroni\Database\Migration\PostsTableMigration;
 
-$connection = Connection::getInstance()->setOptions(config('database'))->connect();
+$connection = app()->get('connection');
 
 (new PostsTableMigration($connection))->migrate();
-// define other migrations here...
+// Define other migrations here...

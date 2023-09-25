@@ -2,16 +2,14 @@
 
 use Makaroni\System\Controller\PostController;
 
+$this->add("/posts", [PostController::class, 'getAll'], "posts");
 
-$this->add("/posts", ['_controller' => PostController::class, '_method' => 'getAll'], "posts");
+$this->add("/post/new", [PostController::class, 'create'], "post-create");
+$this->add("/post/create", [PostController::class, 'store'], "post-store");
 
-$this->add("/post/new", ['_controller' => PostController::class, '_method' => 'create'], "post-create");
-$this->add("/post/create", ['_controller' => PostController::class, '_method' => 'store'], "post-store");
+$this->add("/post/{id}/edit", [PostController::class, 'edit'], "post-edit");
+$this->add("/post/{id}/update", [PostController::class, 'update'], "post-update");
 
-$this->add("/post/{id}/edit", ['_controller' => PostController::class, '_method' => 'edit'], "post-edit");
-$this->add("/post/{id}/update", ['_controller' => PostController::class, '_method' => 'update'], "post-update");
+$this->add("/post/{id}/delete", [PostController::class, 'delete'], "post-delete");
 
-$this->add("/post/{id}/delete", ['_controller' => PostController::class, '_method' => 'delete'], "post-delete");
-
-$this->add("/post/{slug}", ['_controller' => PostController::class, '_method' => 'getBySlug'], "post");
-
+$this->add("/post/{slug}", [PostController::class, 'getBySlug'], "post");

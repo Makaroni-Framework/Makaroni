@@ -1,4 +1,5 @@
 <?php
+
 namespace Makaroni\System\Controller;
 
 use Makaroni\Core\Validation\Validation;
@@ -42,7 +43,7 @@ class PostController
             'slug' => $slug,
             'body' => $body,
         ])->run();
-        
+
         redirect('/posts');
     }
 
@@ -72,14 +73,14 @@ class PostController
             'slug' => $slug,
             'body' => $body,
         ])->where(['id', '=', $id])->run();
-        
+
         redirect('/posts');
     }
 
     public function delete($parameter)
     {
         Post::delete()->where(['id', '=', $parameter['id']])->run();
-    
+
         redirect('/posts');
     }
 }
