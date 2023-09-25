@@ -3,10 +3,9 @@
 <?php
 require 'vendor/autoload.php';
 
-use Makaroni\Core\Database\Connection;
-use Makaroni\Database\Migration\FoodsTableMigration;
+use Makaroni\Database\Migration\UsersTableMigration;
 
-$connection = Connection::getInstance()->setOptions(config('database'))->connect();
+$connection = app()->get('connection');
 
-(new FoodsTableMigration($connection))->migrate();
+(new UsersTableMigration($connection))->migrate();
 // define other migrations here...

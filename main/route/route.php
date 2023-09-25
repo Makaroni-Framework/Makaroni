@@ -1,7 +1,5 @@
 <?php
 
-use Makaroni\System\Controller\FoodController;
+use Makaroni\System\Controller\UserController;
 
-
-$this->add("/", ['_controller' => FoodController::class, '_method' => 'index'], "makaroni_welcome");
-
+$this->add("/", [UserController::class, 'index'], "makaroni_welcome");

@@ -1,8 +1,8 @@
 <?php
+
 namespace Makaroni\System\Controller;
 
-
-class FoodController
+class UserController
 {
     public function index()
     {

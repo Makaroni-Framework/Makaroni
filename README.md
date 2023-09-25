@@ -29,7 +29,7 @@ composer create-project makaroni/framework project-name
 ```
 OR 
 
-[download last release](https://github.com/Makaroni-Framework/Makaroni/releases/tag/v1.1.1) and run `composer install`.
+[download last release](https://github.com/Makaroni-Framework/Makaroni/releases/tag/v1.2.0) and run `composer install`.
 
 Now start the magic!
 
@@ -52,13 +52,13 @@ For create new route, in `route.php` file:
 ```php
 use Makaroni\Framework\Route\Router;
 
-$this->add("/", ['_controller' => PostController::class, '_method' => 'index'], "post_index");
+$this->add("/", [PostController::class, 'index'], "post_index");
 
 // with parameters
-$this->add("/post/{slug}", ['_controller' => PostController::class, '_method' => 'show'], "post_show");
+$this->add("/post/{slug}", [PostController::class, 'show'], "post_show");
 ```
 ## Validation
-You can validate your inputs with `validate` methods, which gives array of arrays for validation: 
+You can validate your inputs with `validate` method, which gives array of arrays for validation: 
 ```php
 
 use Makaroni\Framework\Validation\Validation;
@@ -89,7 +89,7 @@ Use `yum` for run your local webserver:
 ```php
 php yum
 
-// PHP 8.1.14 Development Server (http://localhost:8080) started...
+// PHP Development Server (http://localhost:8080) started...
 ```
 ## Migrate
 Use `migrate` for run your migrations
