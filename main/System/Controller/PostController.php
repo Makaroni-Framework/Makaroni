@@ -14,10 +14,10 @@ class PostController
         return view('posts', compact('posts'));
     }
 
-    public function getBySlug($parameter)
+    public function getBySlug($slug)
     {
-        (new Validation)->validate([['slug', $parameter['slug'], 'words']]);
-        $post = Post::all()->where(['slug', '=', $parameter['slug']])->run()[0];
+        (new Validation)->validate([['slug', $slug, 'words']]);
+        $post = Post::all()->where(['slug', '=', $slug])->run()[0];
         return view('post', ['post' => $post, 'title' => $post['title']]);
     }
 
@@ -47,22 +47,22 @@ class PostController
         redirect('/posts');
     }
 
-    public function edit($parameter)
+    public function edit($id)
     {
-        $post = Post::all()->where(['id', '=', $parameter['id']])->run()[0];
+        $post = Post::all()->where(['id', '=', $id])->run()[0];
 
         return view('edit', ['post' => $post, 'title' => 'Update Post']);
     }
 
-    public function update($parameter)
+    public function update($id)
     {
-        $id = $parameter["id"];
+        $postId = $id;
         $title = request()->input("title");
         $slug = request()->input("slug");
         $body = request()->input("body");
 
         (new Validation)->validate([
-            ['id', $id, 'int'],
+            ['id', $postId, 'int'],
             ['title', $title, 'words'],
             ['slug', $slug, 'words'],
             ['body', $body, 'words'],
@@ -72,14 +72,14 @@ class PostController
             'title' => $title,
             'slug' => $slug,
             'body' => $body,
-        ])->where(['id', '=', $id])->run();
+        ])->where(['id', '=', $postId])->run();
 
         redirect('/posts');
     }
 
-    public function delete($parameter)
+    public function delete($id)
     {
-        Post::delete()->where(['id', '=', $parameter['id']])->run();
+        Post::delete()->where(['id', '=', $id])->run();
 
         redirect('/posts');
     }

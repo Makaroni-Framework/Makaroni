@@ -2,14 +2,14 @@
 
 use Makaroni\System\Controller\PostController;
 
-$this->add("/posts", [PostController::class, 'getAll'], "posts");
+router()->get("/posts", [PostController::class, 'getAll'])->name("posts");
 
-$this->add("/post/new", [PostController::class, 'create'], "post-create");
-$this->add("/post/create", [PostController::class, 'store'], "post-store");
+router()->get("/post/new", [PostController::class, 'create'])->name("post-create");
+router()->post("/post/create", [PostController::class, 'store'])->name("post-store");
 
-$this->add("/post/{id}/edit", [PostController::class, 'edit'], "post-edit");
-$this->add("/post/{id}/update", [PostController::class, 'update'], "post-update");
+router()->get("/post/{id}/edit", [PostController::class, 'edit'])->name("post-edit");
+router()->post("/post/{id}/update", [PostController::class, 'update'])->name("post-update");
 
-$this->add("/post/{id}/delete", [PostController::class, 'delete'], "post-delete");
+router()->get("/post/{id}/delete", [PostController::class, 'delete'])->name("post-delete");
 
-$this->add("/post/{slug}", [PostController::class, 'getBySlug'], "post");
+router()->get("/post/{slug}", [PostController::class, 'getBySlug'])->name("post");

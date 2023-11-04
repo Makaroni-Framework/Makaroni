@@ -1,4 +1,4 @@
-<form action="/post/<?= $post['id'] ?>/update" method="POST">
+<form action="<?= router()->url('post-update', ['id' => $post['id']])?>" method="POST">
     <div class="form-group">
         <label>Title</label>
         <input type="text" class="form-control" name="title" value="<?= $post['title'] ?>" required>

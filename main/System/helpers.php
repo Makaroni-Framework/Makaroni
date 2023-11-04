@@ -1,9 +1,8 @@
 <?php
 
 use Makaroni\Core\App;
-use Makaroni\Core\Config\Config;
-use Makaroni\Core\Request\Request;
 use Makaroni\Core\View\View;
+use Makaroni\Core\Config\Config;
 
 if (!function_exists('view')) {
 
@@ -27,7 +26,15 @@ if (!function_exists('request')) {
 
     function request(): object
     {
-        return new Request();
+        return app()->get('request');
+    }
+}
+
+if (!function_exists('router')) {
+
+    function router(): object
+    {
+        return app()->get('router');
     }
 }
 
@@ -41,9 +48,9 @@ if (!function_exists('redirect')) {
 
 if (!function_exists('vd')) {
 
-    function vd(mixed $data): void
+    function vd(...$args): void
     {
-        exit(var_dump($data));
+        exit(array_walk($args, fn ($arg) => var_dump($arg)));
     }
 }
 
