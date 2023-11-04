@@ -29,7 +29,7 @@ composer create-project makaroni/framework project-name
 ```
 OR 
 
-[download last release](https://github.com/Makaroni-Framework/Makaroni/releases/tag/v1.2.0) and run `composer install`.
+[download last release](https://github.com/Makaroni-Framework/Makaroni/releases/tag/v1.3.0) and run `composer install`.
 
 Now start the magic!
 
@@ -47,16 +47,9 @@ Now start the magic!
 
 
 ## Routing
-For create new route, in `route.php` file:
+[See full documentation](https://github.com/alirezasalehizadeh/Routail) 
 
-```php
-use Makaroni\Framework\Route\Router;
 
-$this->add("/", [PostController::class, 'index'], "post_index");
-
-// with parameters
-$this->add("/post/{slug}", [PostController::class, 'show'], "post_show");
-```
 ## Validation
 You can validate your inputs with `validate` method, which gives array of arrays for validation: 
 ```php
