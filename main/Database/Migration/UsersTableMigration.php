@@ -2,9 +2,9 @@
 
 namespace Makaroni\Database\Migration;
 
+use Makaroni\Core\Database\Migration\Migration;
 use Alirezasalehizadeh\QuickMigration\Structure\Structure;
 use Alirezasalehizadeh\QuickMigration\Structure\StructureBuilder;
-use Makaroni\Core\Database\Migration\Migration;
 
 class UsersTableMigration extends Migration
 {

@@ -6,7 +6,7 @@
         "psr-4": {
             "Makaroni\\": "main/"
         },
-        "files": ["main/System/helpers.php", "main/starter.php"]
+        "files": ["main/System/helpers.php", "main/starter.php", "main/route/route.php"]
     },
     "authors": [
         {
@@ -15,7 +15,7 @@
         }
     ],
     "require": {
-        "makaroni/core": "^1.2.0"
+        "makaroni/core": "^1.3.0"
     },
     "minimum-stability" : "dev"
 }

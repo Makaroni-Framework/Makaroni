@@ -1,15 +1,10 @@
 <?php
 
-use Makaroni\Core\App;
-use Makaroni\Core\Config\Config;
-use Makaroni\Core\Request\Request;
-use Makaroni\Core\View\View;
-
 if (!function_exists('view')) {
 
     function view(string $view, array $data = []): void
     {
-        (new View('../view/', '.view.php'))->make($view, $data);
+        app()->get('view')->make($view, $data);
     }
 }
 
@@ -17,7 +12,7 @@ if (!function_exists('config')) {
 
     function config(string|int $key): mixed
     {
-        return (new Config(app()->get('config')))->get($key);
+        return app()->get('config')->get($key);
     }
 }
 
@@ -25,7 +20,15 @@ if (!function_exists('request')) {
 
     function request(): object
     {
-        return new Request();
+        return app()->get('request');
+    }
+}
+
+if (!function_exists('router')) {
+
+    function router(): object
+    {
+        return app()->get('router');
     }
 }
 
@@ -39,9 +42,9 @@ if (!function_exists('redirect')) {
 
 if (!function_exists('vd')) {
 
-    function vd(mixed $data): void
+    function vd(...$args): void
     {
-        exit(var_dump($data));
+        exit(array_walk($args, fn ($arg) => var_dump($arg)));
     }
 }
 
@@ -49,6 +52,6 @@ if (!function_exists('app')) {
 
     function app(): object
     {
-        return App::getInstance();
+        return \Makaroni\Core\App::getInstance();
     }
 }
