@@ -53,16 +53,16 @@ db:
       MYSQL_ROOT_PASSWORD: your password
 
 ```
-4) Run
+3) Run
 ```shell
 docker compose -f docker/docker-compose.yml up --build
 ```
 
-5) In `php-fpm` container run for create tables
+4) In `php-fpm` container run for create tables
 ```shell
 php migrate
 ```
-6) Now open `localhost:8009/posts` and start...
+5) Now open `localhost:8009/posts` and start...
 
 ## Contributing
 Send your pull requests for contributing.
